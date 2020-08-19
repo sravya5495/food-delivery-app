@@ -10,7 +10,9 @@ import sravya.entity.OrderDetails;
 import sravya.repo.OrderDetailsRepository;
 import sravya.entity.Restaurant;
 import sravya.repo.RestaurantRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class OnlineFoodDeliveryCommonDaoImpl implements OnlineFoodDeliveryCommonDao{
 
 	@Inject
