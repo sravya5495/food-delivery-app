@@ -1,0 +1,40 @@
+origin:
+    id
+	origin_name;
+
+destination:
+    id; (PK)
+	name;
+	origin-id; (FK)-->reference table "origin" (many-to-one)
+	
+
+restaurant:
+    id; (PK)
+    name;
+    location;
+	destination-id; (FK)-->reference table "restaurants" (one-to-many)
+	
+menu:
+    id; (PK)
+	type;
+	info;
+	menu-item-id; (FK)-->reference table "menu-item (one-to-many)
+	restaurant-id; (FK)-->reference table "restaurant" (Many-to-one)
+
+menu-item:
+    id; (PK)
+	name;
+	info;
+	image-url;
+	price;
+	menu-id (FK)-->reference table "menu" (Many-to-one)
+
+order-details:
+    id;
+	username;
+	date;
+	menu-item-id; (FK)-->reference table "menu-item" (one-to-many)
+	status;
+	total_price
+
+
